@@ -6,7 +6,7 @@ Testing Features:
 Scenario ,Given, And , Then, 
 </br>
 GET operation with params:</br>
-given() , .with(), .when(), .then(), .queryParam() ,hasSize(num),
+given() , .with(), .when(), .then(), .queryParam() ,hasSize(num), hasItem()
 
 
 </br>
