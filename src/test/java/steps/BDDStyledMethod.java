@@ -3,7 +3,7 @@ package steps;
 import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.Is.is;
 
 public class BDDStyledMethod {
@@ -25,6 +25,39 @@ public class BDDStyledMethod {
                 .body("author", containsInAnyOrder("typicode", "elad avrahami",null)).statusCode(200);
                 //המפתח יהיה המירה "מחבר" והערכים שיכולים להיות לפי איזה סדר של הכנסה שאני רוצה הם ה"ערכים"
                 //יש לשים לב שבבדיקה גם הסטטוס קוד שמתקבל גם אם בטווח 200 כלומר התקבל תקין הוא צריך להיות שווה לסטטוס קוד שמצפים לקבל במתודה שרושמים למשל אם נרשום בסטטוס קוד 204 במקום 200 שמצופה להתקבל מהשרת (ניתן לראות בcmd ) תתקבל שגיאה בהרצת התסריט בדיקה
+    }
+
+
+    //part4
+    //הכנסת פרמטרים בתוך נתיב כתובת
+    //בודק האם באידיי מס 2  שמתקבל בכתובת מסויימת שהמפתח שלו הוא "מחבר" והערך שלו הוא "אלעד"
+    public  static void PerformPathParameter(){
+        given()
+                .contentType(ContentType.JSON).
+        with()
+                .pathParams("post",2).
+        when()
+                .get("http://localhost:3000/posts/{post}").
+        then()
+                .body("author",containsString("elad avrahami")) ;
+
+    }
+
+    //Part4
+
+    /**
+     * check with queryParam if there is author "hasItem" typicode that its id is 1 .
+     */
+    public  static void PerformQueryParameter(){
+        //
+        given()
+                .contentType(ContentType.JSON)
+                .queryParam("id",1).
+                when()
+                .get("http://localhost:3000/posts/").
+                then()
+                .body("author", hasItem( "typicode")) ;
+
     }
 
 }

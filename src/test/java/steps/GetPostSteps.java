@@ -38,7 +38,7 @@ public class GetPostSteps {
         BDDStyledMethod.PerformContainsCollection();
     }
 
-    /*
+      /*
     //part 3
       //I start the testing like this but if i want to make it shorter use the one up^
       //רשמתי בתמציתיות את הפקודות במחלקה הסטטית BDDStyledMethod ומימשתי למעלה ***
@@ -59,4 +59,19 @@ public class GetPostSteps {
     public void iShouldSeeTheAuthorNameAs(String arg0) {
 
     }*/
+
+    //part 4
+    @Then("I should see verify GET Parameter")
+    public void iShouldSeeVerifyGETParameter() throws Throwable {
+        BDDStyledMethod.PerformPathParameter();
+    }
+
+    @Then("I should see verify by Query GET Parameter")
+    public void iShouldSeeVerifyByQueryGETParameter() throws  Throwable{
+        BDDStyledMethod.PerformQueryParameter();
+    }
+
+
+
+
 }
