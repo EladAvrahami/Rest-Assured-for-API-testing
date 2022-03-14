@@ -31,7 +31,7 @@ Creat scanerio for POST with body and path params + step definition implementati
 <-- PAY ATTENTION!!! TO DELETE THE DEFULD <SCOP> THAT COMES WITH THAT OR THERE WILL BE
   DIFFICULT TO IMPORT JAVA's OTHER CLASSES !!!! (according to :https://stackoverflow.com/questions/58515714/the-import-io-restassured-restassured-cannot-be-resolved )  -->
       
-</br></br>
+</br>
 
 #5</br>
 perform a POST operation with path&body parameters- Scenario 7</br>
