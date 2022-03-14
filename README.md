@@ -34,7 +34,8 @@ Creat scanerio for POST with body and path params + step definition implementati
 perform a POST operation with path&body parameters- Scenario 7</br>
 assertThat()- The assertThat is one of the JUnit methods from the Assert object that can be used to
         check if a specific value match to an expected one. It primarily accepts 2 parameters.
-        First one if the actual value and the second is a matcher object. I use it to compere between the name valuse that i supposed to get to the one i got . 
+        First one if the actual value and the second is a matcher object. I use it to compere between the name valuse that i supposed to get to the one i got . </br>
+DataTable and new way to use it :  //https://stackoverflow.com/questions/55591569/cucumber-datatable-error-io-cucumber-datatable-undefineddatatabletypeexception .
         
    
 
