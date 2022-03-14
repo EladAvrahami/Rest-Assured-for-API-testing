@@ -22,6 +22,13 @@ given() , .with(), .when(), .then(), .queryParam() ,hasSize(num), hasItem() .
 requestSpecBuilder class , setBaseUri() ,builder</br>
    2 - RestAssuredExtantion:</br>
    RequestSpecification class -is a important class becouse it has a lot of staff like cookies parameters query parameters and a lot more ... 
+   </br></br>
+   
+   4# </br>
+POST with body parameter:</br>
+
+</br></br>
+   
 
 
 </br>
