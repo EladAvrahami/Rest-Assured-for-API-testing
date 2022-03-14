@@ -1,6 +1,9 @@
 package steps;
 
 import io.restassured.http.ContentType;
+import org.hamcrest.core.Is;
+
+import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -57,6 +60,26 @@ public class BDDStyledMethod {
                 .get("http://localhost:3000/posts/").
                 then()
                 .body("author", hasItem( "typicode")) ;
+
+    }
+
+    //Part6
+    /** RUN A POST OPERATION WITH BODY PARAMETERS */
+    public static void PerformPOSTWithBodyParameter(){
+        //create mew hash map called "postContent" with key value contents
+        HashMap<String,String> postContent=new HashMap<>();
+        postContent.put("id","5");
+        postContent.put("title","elad course");
+        postContent.put("author","eladA");
+        //given content in json model>with the hash map content>when post specific url>then check key&value
+        given()
+                .contentType(ContentType.JSON).
+        with()
+                .body(postContent).
+        when()
+                .post("http://localhost:3000/posts").
+        then()
+                .body("author", Is.is("eladA"));
 
     }
 

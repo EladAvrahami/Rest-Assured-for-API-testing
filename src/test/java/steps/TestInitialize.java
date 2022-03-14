@@ -5,6 +5,7 @@ import utilities.RestAssuredExtension;
 
 public class TestInitialize {
 
+    //responsible invoking my method
     @Before
     public void TestSetup(){
         //

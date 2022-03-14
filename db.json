@@ -1,15 +1,46 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-	 { "id": 2, "title": "this json-server", "author": "elad avrahami" }
-	 ,
-	 { "id": 3}
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "elad avrahami"
+    },
+    {
+      "id": 2,
+      "title": "this json-server",
+      "author": "elad avrahami"
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "enter by postman",
+      "author": "elad "
+    },
+    {
+      "author": "eladA",
+      "id": "5",
+      "title": "elad course"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-	{ "id": 2, "body": "exellent course", "postId": 2 },
-	{ "id": 21}
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "exellent course",
+      "postId": 2
+    },
+    {
+      "id": 21
+    }
   ],
-  "profile": 
-	{ "name": "typicode" }
+  "profile": {
+    "name": "Sam",
+    "postId": "2"
+  }
 }
