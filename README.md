@@ -26,6 +26,7 @@ requestSpecBuilder class , setBaseUri() ,builder</br>
    
    4# </br>
 POST with body parameter:</br>
+use json serializer as pom dependency called Jackson-make the haseMap that puted as key value in the BDDStyleMethod to availible to create a new server json object.</br>
 
 </br></br>
    
