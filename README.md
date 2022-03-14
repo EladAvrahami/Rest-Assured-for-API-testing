@@ -26,9 +26,16 @@ requestSpecBuilder class , setBaseUri() ,builder</br>
    
    4# </br>
 POST with body parameter:</br>
-use json serializer as pom dependency called Jackson-make the haseMap that puted as key value in the BDDStyleMethod to availible to create a new server json object.</br>
-
+Use json serializer as pom dependency called Jackson-make the haseMap that puted as key value in the BDDStyleMethod to availible to create a new server json objects.</br>
+Creat scanerio for POST with body and path params + step definition implementation
 </br></br>
+
+#5</br>
+perform a POST operation with path&body parameters- Scenario 7</br>
+assertThat()- The assertThat is one of the JUnit methods from the Assert object that can be used to
+        check if a specific value match to an expected one. It primarily accepts 2 parameters.
+        First one if the actual value and the second is a matcher object. I use it to compere between the name valuse that i supposed to get to the one i got . 
+        
    
 
 
