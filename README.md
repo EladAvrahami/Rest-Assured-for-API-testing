@@ -28,7 +28,7 @@ requestSpecBuilder class , setBaseUri() ,builder</br>
 POST with body parameter:</br>
 Use json serializer as pom dependency called Jackson-make the haseMap that puted as key value in the BDDStyleMethod to availible to create a new server json objects.</br>
 Creat scanerio for POST with body and path params + step definition implementation. </br>
-<!-- PAY ATTENTION!!! TO DELETE THE DEFULD <SCOP> THAT COMES WITH THAT OR THERE WILL BE
+<-- PAY ATTENTION!!! TO DELETE THE DEFULD <SCOP> THAT COMES WITH THAT OR THERE WILL BE
   DIFFICULT TO IMPORT JAVA's OTHER CLASSES !!!! (according to :https://stackoverflow.com/questions/58515714/the-import-io-restassured-restassured-cannot-be-resolved )  -->
       
 </br></br>
