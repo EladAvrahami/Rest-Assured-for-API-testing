@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=MBBWVgE0ewk  -cmd nevigation
+https://github.com/typicode/json-server - json server git
+
+https://github.com/rest-assured/rest-assured/wiki/GettingStarted  -rest-assured dependency
+https://mvnrepository.com/artifact/io.cucumber/cucumber-java -cucumber dependency
+

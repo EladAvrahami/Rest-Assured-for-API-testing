@@ -3,7 +3,7 @@ Feature: GETPosts
 
   #befor starting any scenario you should type "json-server .\db.json" at your local cmd and put
   #some values in the json local file that will be created .
-  #U can take a demo db file from the one i posted on my gitHub page
+  #U can take a demo db file from the one i posted on my gitHub page or chake how to create ur own here:https://github.com/typicode/json-server
 
   Scenario: Verify author of the post
     Given I perform GET operation for "/posts"

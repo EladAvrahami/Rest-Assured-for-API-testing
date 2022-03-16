@@ -84,6 +84,27 @@ public class RestAssuredExtension {
        return null;
     }*/
 
+    /*this is the methods that I will required to perform scenario 8 at the DELETEPost.feature */
+    //Part 8
+    public static ResponseOptions<Response> PostOperationWithBody (String url,Map<String ,String > body){
+        Request.body(body);
+        return Request.post(url);
+    }
+    //Part 8
+    public static ResponseOptions<Response> DeleteOperationWithPathParams (String url,Map<String ,String > pathParams){
+        Request.pathParams(pathParams);
+        return Request.delete(url);
+    }
+    //Part 8
+    public static ResponseOptions<Response> GetWithPathParams (String url,Map<String ,String > pathParams){
+        Request.pathParams(pathParams);
+        return Request.get(url);
+    }
+
+
+
+
+
 
 
 

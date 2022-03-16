@@ -102,6 +102,8 @@ public class GetPostSteps {
         List<List<String>> data = table.asLists(String.class);
         //set body
         HashMap<String,String> body=new HashMap<>();
+        //"name" come from the data table that i wrote in the 7 scenario
+        //put in there the first row with the zero column value (the position of the obj of table in scenario 7)
         body.put("name",data.get(1).get(0));
         //path params
         HashMap<String,String> pathParams=new HashMap<>();
