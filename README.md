@@ -45,6 +45,8 @@ DataTable and new way to use it :  //https://stackoverflow.com/questions/5559156
 #6</br>
 perform a DELET operation with RESTassured - Scenario 8</br>
 just follow the scenario (: + I biuld methods at the RestAssuredExtension java class that I will be required to perform scenario 8 at the DELETEPost.feature
+</br>
+Scnerio Part 8 start process of POST obj >DELETE him>and chack if found with Get operation
         
    
 
