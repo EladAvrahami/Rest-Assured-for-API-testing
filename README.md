@@ -6,13 +6,13 @@ pattern behavior-driven development (BDD) is an agile software development proce
 </br>
 </br>
 
-1# </br>
+#1 </br>
 Testing Features:</br>
 Scenario ,Given, And , Then . 
 </br>
 </br>
 
-2# </br>
+#2 </br>
 GET operation with params:</br>
 given() , .with(), .when(), .then(), .queryParam() ,hasSize(num), hasItem() .
 </br></br>
@@ -24,7 +24,7 @@ requestSpecBuilder class , setBaseUri() ,builder</br>
    RequestSpecification class -is a important class becouse it has a lot of staff like cookies parameters query parameters and a lot more ... 
    </br></br>
    
-   4# </br>
+   #4 </br>
 POST with body parameter:</br>
 Use json serializer as pom dependency called Jackson-make the haseMap that puted as key value in the BDDStyleMethod to availible to create a new server json objects.</br>
 Creat scanerio for POST with body and path params + step definition implementation. </br>
@@ -39,6 +39,12 @@ assertThat()- The assertThat is one of the JUnit methods from the Assert object 
         check if a specific value match to an expected one. It primarily accepts 2 parameters.
         First one if the actual value and the second is a matcher object. I use it to compere between the name valuse that i supposed to get to the one i got . </br>
 DataTable and new way to use it :  //https://stackoverflow.com/questions/55591569/cucumber-datatable-error-io-cucumber-datatable-undefineddatatabletypeexception .
+</br>
+</br>
+
+#6</br>
+perform a DELET operation with RESTassured - Scenario 8</br>
+just follow the scenario (: 
         
    
 
