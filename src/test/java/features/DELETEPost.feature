@@ -1,7 +1,7 @@
 Feature: DeletePost
   Test the delete operation
 
-  #Part8
+  #Part8+9
   Scenario: Verify DELETE operation after POST
     Given I ensure to Perform POST operation "/posts" with body as
       |id |title       |   author       |

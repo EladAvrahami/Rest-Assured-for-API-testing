@@ -1,14 +1,17 @@
 package steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
+import org.hamcrest.core.IsNot;
 import utilities.RestAssuredExtension;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
@@ -154,10 +157,51 @@ public class GetPostSteps {
     }
 
 
+    //Part 9 implement this method from DeletePost feature file
+    @Given("I ensure to Perform POST operation {string} with body as")
+    public void iEnsureToPerformPOSTOperationWithBodyAs(String url,DataTable table)throws Throwable {
+        //JEST LIKE LINE 101
+        List<List<String>> data = table.asLists(String.class);
+        //just like in part 6 at Page BDDStyledMethod
+        Map<String,String> body=new HashMap<>();
+        //get values from cucumber data table
+        //                  row     col of the delete table
+        body.put("id",data.get(1).get(0));
+        body.put("title",data.get(1).get(1));
+        body.put("author",data.get(1).get(2));
+        //perform post operation- use method that i write in RestAssuredExtension
+        RestAssuredExtension.PostOperationWithBody(url,body);
+    }
 
 
+    //Part 9 implement line 2 of the scenario in order to perform delete operation
+    @And("I perform DELETE operation for {string}")
+    public void iPerformDELETEOperationFor(String url,DataTable table)throws Throwable{
+        List<List<String>> data = table.asLists(String.class);
+        Map<String,String> pathParams=new HashMap<>();
+        //and again take info of     row    & col from cucumber data table that i wrote in the DELETE.feature
+        pathParams.put("postid",data.get(1).get(0));
+        //perform delete operation
+        RestAssuredExtension.DeleteOperationWithPathParams(url,pathParams);
+    }
 
 
+    //Part 9 implement line 4 of the scenario in order to check title not exists anymore
+    @Then("I should not see the body with title as {string}")
+    public void iShouldNotSeeTheBodyWithTitleAs(String title) throws Throwable {
+        //get the respond of titles and verify that it don't contain the title we already delete
+        assertThat(response.getBody().jsonPath().get("title"), IsNot.not(title));
+    }
 
+    //Part 9 implement line 3 of the scenario in order to see that now that i try to get the object i deleted it wont shoe anything
+    @And("I perform GET operation with path parameter for {string}")
+    public void iPerformGETOperationWithPathParameterFor(String url,DataTable table)throws Throwable {
+        //JEST LIKE LINE 101
+        List<List<String>> data = table.asLists(String.class);
+        //just like in part 6 at Page BDDStyledMethod
+        Map<String,String> pathParams=new HashMap<>();
+        pathParams.put("postid",data.get(1).get(0));
+        response=RestAssuredExtension.GetWithPathParams(url,pathParams);
 
+    }
 }
