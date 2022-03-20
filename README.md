@@ -51,7 +51,10 @@ Scnerio Part 8 start process of POST obj >DELETE him>and chack if found with Get
 </br>
 #7</br>
 implement DELETEPost Scenario+ debuge it by using live json server +debug+postman
-        
+</br>
+</br>
+#8</br>
+implement PUTPost Scenario create PutOperationWithBodyAndPathParams in restAssuredExtention+impliment Scenario and create codition chack if it was updated 
    
 
 
