@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.response.ResponseOptions;
 import io.restassured.specification.RequestSpecification;
 
@@ -102,13 +103,10 @@ public class RestAssuredExtension {
     }
 
 
-
-
-
-
-
-
-
-
-
+    /*part 10 create new put method in order to execute in GetPostSteps*/
+    public static ResponseBody<Response> PutOperationWithBodyAndPathParams(String url, Map<String, String> body, Map<String, String> pathParams) {
+        Request.pathParams(pathParams);
+        Request.body(body);
+        return Request.put(url);
+    }
 }

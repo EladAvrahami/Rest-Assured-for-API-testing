@@ -12,4 +12,4 @@ Feature: DeletePost
     And I perform GET operation with path parameter for "/posts/{postsid}"
       |postid|
       |6     |
-    Then I should not see the body with title as "API TESTING repo"
+    Then I "should not" see the body with title as "API TESTING repo"

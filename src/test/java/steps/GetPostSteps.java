@@ -13,8 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 //import static org.hamcrest.MatcherAssert.assertThat;-add this line to get assertThat method
@@ -202,6 +201,40 @@ public class GetPostSteps {
         Map<String,String> pathParams=new HashMap<>();
         pathParams.put("postid",data.get(1).get(0));
         response=RestAssuredExtension.GetWithPathParams(url,pathParams);
+
+    }
+
+    /* Part 10 */
+    @And("I perform PUT operation for {string}")
+    public void iPerformPUTOperationFor(String url,DataTable table) throws  Throwable{
+        List<List<String>> data = table.asLists(String.class);
+        Map<String,String> body=new HashMap<>();
+        //get values from cucumber data table
+        //                  row     col of the delete table
+        body.put("id",data.get(1).get(0));
+        body.put("title",data.get(1).get(1));
+        body.put("author",data.get(1).get(2));
+
+        Map<String,String> pathParams=new HashMap<>();
+        pathParams.put("postid",data.get(1).get(0));
+
+        //perform post operation- use method that i write in RestAssuredExtension
+        RestAssuredExtension.PutOperationWithBodyAndPathParams(url,body,pathParams);
+
+
+    }
+
+
+
+    /*part 10 */
+    //check if i get the value that was updated
+    @Then("I {string} see the body with title as {string}")
+    public void iSeeTheBodyWithTitleAs(String condition, String title)  throws  Throwable{
+
+        if (condition.equalsIgnoreCase("should not"))
+            assertThat(response.getBody().jsonPath().get("title"),IsNot.not(title));
+        else
+            assertThat(response.getBody().jsonPath().get("title"),is(title));
 
     }
 }
