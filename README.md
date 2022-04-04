@@ -60,7 +60,7 @@ implement PUTPost Scenario create PutOperationWithBodyAndPathParams in restAssur
 
 </br>
 </br>
-## helpful links: </br>
+##  helpful links: 
 1.https://github.com/typicode/json-server</br>
 2.https://rest-assured.io/ </br>
 3.https://www.youtube.com/watch?v=MBBWVgE0ewk ->cmd nevigation
