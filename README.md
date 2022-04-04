@@ -60,9 +60,14 @@ implement PUTPost Scenario create PutOperationWithBodyAndPathParams in restAssur
 
 </br>
 </br>
-helpful links: </br>
+## helpful links: </br>
 1.https://github.com/typicode/json-server</br>
-2.https://rest-assured.io/
+2.https://rest-assured.io/ </br>
+3.https://www.youtube.com/watch?v=MBBWVgE0ewk ->cmd nevigation
+https://github.com/typicode/json-server - json server git
+</br>
+https://github.com/rest-assured/rest-assured/wiki/GettingStarted  -> rest-assured dependency
+https://mvnrepository.com/artifact/io.cucumber/cucumber-java -> cucumber dependency
 <!--  link to youtube course : https://www.youtube.com/watch?v=TeAU1n9UspI&list=PL6tu16kXT9PpgqfMbMdzUzDenYgb0gbk0&index=2  -->
 
 
